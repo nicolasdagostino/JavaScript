@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejemplo formulario 1</title>
+</head>
+<body>
+	<div id="errores"></div>
+	<form action="#" method="get" id="formulario" name="">
+		<div>
+			<label for="nombre">Nombre: *</label>
+			<input type="text" name="nom" id="nombre">	
+		</div>
+		<div>
+			<label for="primerapellido">Primer apellido: *</label>
+			<input type="text" name="apellido1" id="primerApellido">
+		</div>		
+		<div>
+			<label for="segundoapellido">Segundo apellido: *</label>
+			<input type="text" name="apellido2" id="segundoApellido">
+		</div>	
+		<div>
+			<label for="telefono">Teléfono: *</label>
+			<input type="text" name="telefono" id="telefono">	
+		</div>	
+		<div>
+			<label>Fecha de nacimiento:</label>
+			Dia: <input type="text" name="dia" id="dia" maxlenght=2>	
+			Mes: <input type="text" name="mes" id="mes" maxlenght=2>	
+			Año: <input type="text" name="año" id="ano" maxlenght=4>
+		</div>	
+		<div>
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email">	
+		</div>	
+		<div>
+			<input type="checkbox" value="privacidad" name="privacidad" id="privacidad">He leido y acepto los términos y condiciones	
+		</div>			
+		<input type="submit" value="Validar y enviar">			
+	</form>
+	<script type="text/javascript" src="js19.js"></script>
+</body>
+</html>
