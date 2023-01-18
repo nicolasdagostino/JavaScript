@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+
+	JSON Antes:
+	<div id=json></div>
+	Después de añadir a Adriana:
+	<div id="resultado"></div>
+	<script type="text/javascript" src="objetos5-1.js"></script>
+	<script type="text/javascript">
+		var_json = localStorage.getItem('personas');
+		document.getElementById('json').innerHTML = var_json;
+		personas = JSON.parse(localStorage.getItem('personas'));
+		personas.push(new Persona('Adriana','Mulleras','Escofet','Mujer'));
+		console.log(personas);
+		let texto='';
+		for (let i=0;i<personas.length;i++) {
+			 texto+= personas[i].nombre+' '+personas[i].apellido1+' '+personas[i].apellido2+'<br>';
+		}
+		document.getElementById('resultado').innerHTML=texto;
+	</script>	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+	<div id=resultado></div>
+	JSON:
+	<div id=json></div>
+	<script type="text/javascript" src="objetos5-1.js"></script>
+	<script type="text/javascript">
+		personas = new Array();
+		personas.push(new Persona('Borja','Mulleras','Vinzia','Hombre'));
+		personas.push(new Persona('Rosa','Berlanga','Muñoz','Mujer'));
+		personas.push(new Persona('Ramon','Lopez','Martinez','Hombre'));
+		let var_json = JSON.stringify(personas);
+
+		localStorage.setItem('personas', var_json);
+		document.getElementById('json').innerHTML = var_json;
+
+	</script>	
+</body>
+</html>

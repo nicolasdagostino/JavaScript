@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+	<div id=resultado></div>
+	<script type="text/javascript">
+		class Persona {
+			constructor(nombre,apellido1,apellido2,sexo) {
+				this._nombre = nombre;
+				this.apellido1 = apellido1;
+				this.apellido2 = apellido2;
+				this.sexo = sexo;
+			}
+			get nombre() {
+				return this._nombre;
+			}
+			set nombre(value) {
+				this._nombre = value;
+			}
+
+			nombre_completo() {
+				return this.nombre+' '+this.apellido1+' '+this.apellido2
+			}
+		}
+		personas = new Array();
+		personas.push(new Persona('Borja','Mulleras','Vinzia','Hombre'));
+		personas.push(new Persona('Rosa','Berlanga','Muñoz','Mujer'));
+		personas.push(new Persona('Ramon','Lopez','Martinez','Hombre'));
+		personas[0].nombre='Javier';
+		let texto='';
+		for (let i=0;i<personas.length;i++) {
+			 texto+= personas[i].nombre_completo()+'<br>';
+		}
+		document.getElementById('resultado').innerHTML=texto;
+	</script>	
+</body>
+</html>

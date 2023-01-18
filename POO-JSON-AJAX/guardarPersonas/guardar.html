@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guardar personas</title>
+</head>
+<body>
+<h2>Añadir una persona</h2>
+	<form id="formulario">
+		Nombre: <input type="text" name="nombre" id="nombre"><br>
+		Apellido1: <input type="text" name="apellido1" id="apellido1"><br>
+		Apellido2: <input type="text" name="apellido2" id="apellido2"><br>
+		Sexo:  <input type="radio" name="sexo" id="sexo" value="Hombre"> Hombre <input type="radio" name="sexo" id="sexo" value="Mujer"> Mujer
+		<input type="submit" value="Guardar persona" id="guardar">
+	</form>
+<h2>Lista de personas</h2>
+<div id="listaPersonas"></div>
+<script type="text/javascript" src="personaClass.js"></script>
+<script type="text/javascript" src="guardar.js"></script>
+</body>
+</html>
