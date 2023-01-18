@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 6 javascript</title>
+<script type="text/javascript">
+function nota() {
+var nota = document.getElementById("nota_num").value;
+if(nota>18 && nota<21)
+	{
+	mensaje="Su calificación es A";
+	}
+else if(nota>15 && nota<19)
+     	{mensaje ="Su calificación es B";}
+	else if(nota>11 && nota<16)
+     		{mensaje="Su calificación es C";}
+		else if(nota>8 && nota<12)
+     			{mensaje="Su calificación es D";}
+			else if(nota>-1 && nota<9)
+				{
+    	    				mensaje="Su calificación es E";
+    				}
+ 	  			else 
+    				{
+    	 				mensaje="No es nota.";
+    				}
+ document.getElementById("nota_letra").innerHTML = mensaje;
+
+}
+</script>
+</head>
+<body>
+Nota númerica: <input type="number" min=0 max=20 id="nota_num">
+<input type="button" onclick="nota();" value="Ver nota letra">
+<div id="nota_letra"> </div>
+</body>
+</html>
